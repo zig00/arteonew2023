@@ -18,6 +18,24 @@
 </head>
 
 <body class="body forstartupsbody" id="body">
+    <div class="navigation-menu" id="navmenu">
+        <ul>
+            <li><a href="">Services</a></li>
+            <li><a href="">Our works</a></li>
+            <div class="dropdownlinknav" id="navmenudropdownlink">
+                <a class="navdropdownmainlink">Expertise</a>
+                <div class="servicesdropdown" id="navmenudropdowninner">
+                    <li><a class="gr" href="">For Startups</a></li>
+                    <li><a class="gr" href="">For Agencies</a></li>
+                    <li><a class="gr" href="">For SME</a></li>
+                </div>
+            </div>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+            <button>Talk to us</button>
+        </ul>
+
+    </div>
     <section class="startups-section1 forstartup-section" id="portfolioinnercol">
         <div class="backgound">
             <img src="images/bimg1.svg" alt="">
@@ -39,14 +57,30 @@
                 </div>
             </a>
             <ul class="headerlinks">
-                <li><a href="">How to use</a></li>
-                <li><a href="">Step-by-Step Guide</a></li>
-                <li><a href="">Benefits</a></li>
-                <li><a href="">Testimonials</a></li>
-                <li><a href="">FAQ</a></li>
+                <li id="joineventlink">
+                    <a href="">Services</a>
+                    <ul class="linkdropdown" id="dropdlink">
+                        <li><a href="forstartups.html">Augmented Reality</a></li>
+                        <li><a href="forinvestors.html">Virtual Reality</a></li>
+                        <li><a href="forprograms.html">Machine Learning</a></li>
+                        <li><a href="forprograms.html">Outsourcing</a></li>
+                        <li><a href="forprograms.html">Staff Augmentation</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Our works</a></li>
+                <li id="joineventlink">
+                    <a href="">Expertise</a>
+                    <ul class="linkdropdown" id="dropdlink">
+                        <li><a href="forstartups.html">For Startup</a></li>
+                        <li><a href="forinvestors.html">For Agencies</a></li>
+                        <li><a href="forprograms.html">For SME</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Blog</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
             <button class="talktousbtn">Talk to us</button>
+            <button class="navmenu-button" id="navmenubtn"><img id="navmenuimg" src="images/Frame 14 (1).svg" alt=""></button>
         </header>
         <div class="forstartups p-main">
             <p class="fstartup-text">For Startups</p>
@@ -443,39 +477,38 @@
             </div>
             <div class="f-right">
                 <div class="flinks1">
-                    <h1>Resources</h1>
+                    <h1>Navigation</h1>
                     <ul>
-                        <li><a href="">Customers</a></li>
-                        <li><a href="">Ebook & Guides</a></li>
-                        <li><a href="">Roadmap</a></li>
-                        <li><a href="">API Documentation</a></li>
-                    </ul>
-                </div>
-                <div class="flinks1">
-                    <h1>Platform</h1>
-                    <ul>
-                        <li><a href="">Analitycs</a></li>
-                        <li><a href="">Plans</a></li>
-                        <li><a href="">Collaboration</a></li>
-                        <li><a href="">Project Management</a></li>
-                    </ul>
-                </div>
-                <div class="flinks1">
-                    <h1>Support</h1>
-                    <ul>
-                        <li><a href="">Customer Service</a></li>
-                        <li><a href="">Help Center</a></li>
-                        <li><a href="">Free Tools</a></li>
-                        <li><a href="">Community</a></li>
-                    </ul>
-                </div>
-                <div class="flinks1">
-                    <h1>Partnership</h1>
-                    <ul>
-                        <li><a href="">Become a Partner</a></li>
-                        <li><a href="">Affiliate Program</a></li>
-                        <li><a href="">Our Partner</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Our Works</a></li>
+                        <li><a href="">Expertise</a></li>
+                        <li><a href="">Blog</a></li>
                         <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Services</h1>
+                    <ul>
+                        <li><a href="">Augmented Reality</a></li>
+                        <li><a href="">Virtual Reality</a></li>
+                        <li><a href="">Outsourcing</a></li>
+                        <li><a href="">Staff Augmentation</a></li>
+                        <li><a href="">AI & Machine Learning</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Expertise</h1>
+                    <ul>
+                        <li><a href="">For Startups</a></li>
+                        <li><a href="">For Agencies</a></li>
+                        <li><a href="">For SME</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Social Media</h1>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Linkedin</a></li>
                     </ul>
                 </div>
             </div>
@@ -493,6 +526,7 @@
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="portfolioinner.js"></script>
+    <script src="navmenu.js"></script>
 </body>
 
 </html>
