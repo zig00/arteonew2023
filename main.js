@@ -29,7 +29,7 @@ $(document).ready(function () {
             {
                 breakpoint: 500,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                 },
@@ -50,7 +50,15 @@ $(document).ready(function () {
         arrows: false,
         responsive: [
             {
-                breakpoint: 850,
+                breakpoint: 1445,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 891,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,

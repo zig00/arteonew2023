@@ -11,6 +11,7 @@ body {
     justify-content: center;
     background: #f5f7f7;
     user-select: none;
+    position: relative;
 }
 html {
     overflow-x: hidden;
@@ -28,7 +29,31 @@ button {
     opacity: 0;
     transition: 0.6s all ease;
 }
-
+.navigation-menu {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    background: white;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+}
+.navmenu-button {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.navmenu-button img {
+    width: 100%;
+    height: 100%;
+}
 .reveal.active {
     transform: translateY(0);
     opacity: 1;
@@ -79,13 +104,64 @@ header {
     position: relative;
     z-index: 100;
 }
-.navmenu .linkdropdown {
+.navigation-menu ul button {
+    border-radius: 200px;
+    background: #009fa8;
+    display: inline-flex;
+    padding: 21px 63px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    border: none;
+    outline: none;
+    margin-top: 48px;
+}
+.servicesdropdown {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.navigation-menu ul {
     position: inherit;
     background: transparent;
-    align-items: flex-start;
-    padding-top: 10px !important;
+    padding-top: 150px !important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
-
+.navdropdownmainlink{
+    margin:  18px 0;
+    color: #2a3342 !important; 
+}
+.navigation-menu ul li {
+    list-style-type: none;
+    margin: 18px 0;
+}
+.navigation-menu ul li a {
+    color: #2a3342;
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.2px;
+}
+.dropdownlinknav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .navmenu .linkdropdown li {
     margin-left: 15px;
     padding: 8px 0;
@@ -143,7 +219,18 @@ header ul #joineventlink:not(:hover) .linkdropdown {
 #joineventlink {
     position: relative;
 }
-
+.gr{
+    color: #7A8597 !important;
+}
+.dropdownlinknav a {
+    color: #7A8597;
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.2px;
+}
 .linkdropdown li {
     margin-left: 20px;
     text-decoration: none;
@@ -172,6 +259,7 @@ header ul #joineventlink:not(:hover) .linkdropdown {
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    position: relative;
 }
 .headerlogotitle {
     display: flex;
@@ -394,6 +482,8 @@ section {
     width: 90%;
     margin-top: 130px;
     margin-bottom: 36px;
+    position: relative;
+    z-index: 222;
 }
 .clientslider-wrapper img {
     margin-right: 16px;
@@ -859,15 +949,19 @@ section {
     background: white;
 }
 .awards-inner {
-    width: 100%;
+    width: 90%;
     max-width: 1580px;
     margin-left: auto;
     display: flex;
     align-items: flex-start;
     position: relative;
+    background: url(images/Frame\ 227.svg);
+    background-position: right;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding-bottom: 32px;
 }
 .awards-inner .left {
-    position: absolute;
     left: 0;
     max-width: 790px;
 }
@@ -1013,6 +1107,31 @@ section {
 .ourworks-main a {
     align-self: center;
     cursor: pointer;
+}
+.works-col button {
+    position: absolute;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    top: 32px;
+    right: 32px;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-top: 0;
+}
+.works-col button img {
+    width: max-content;
+    height: max-content;
+    position: initial;
+    margin-top: 0;
+}
+.works-col.whitecol button {
+    background: #009fa8;
+}
+.works-col.whitecol button img {
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%) brightness(100);
 }
 .moreprojectstxt {
     color: #242424;
@@ -1235,7 +1354,7 @@ section {
     padding-bottom: 200px;
 }
 .serviceslider-main {
-    width: 100%;
+    width: 90%;
     max-width: 1580px;
     margin-left: auto;
     display: flex;
@@ -1377,7 +1496,7 @@ section {
 }
 
 .talktous-container .left p {
-    color: #7A8597;
+    color: #7a8597;
     font-family: Plus Jakarta Sans;
     font-size: 18px;
     font-style: normal;
@@ -1886,7 +2005,7 @@ footer {
 }
 .fstartupservices-inner {
     width: 100%;
-    max-width: 1245px;
+    max-width: 1320px;
     display: flex;
     align-items: flex-start;
     margin-top: 64px;
@@ -2368,20 +2487,20 @@ footer {
 .faq-col1.active img {
     content: url("images/faqgrspan.svg");
 }
-.forstartupnumberscount{
+.forstartupnumberscount {
     position: relative;
     z-index: 999;
 }
-.forstartupnumberscount .counter{
+.forstartupnumberscount .counter {
     color: white;
 }
-.forstartupnumberscount label{
+.forstartupnumberscount label {
     color: white;
 }
-.forstartupnumberscount .undernumberspan{
+.forstartupnumberscount .undernumberspan {
     background: transparent;
 }
-.forstartupnumberscount .numbersopt1 p{
+.forstartupnumberscount .numbersopt1 p {
     color: white;
     opacity: 0.6;
     font-size: 16px;
@@ -2614,7 +2733,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin-top: 240px;
-    width: 100%;
+    width: 90%;
     max-width: 1580px;
     margin-left: auto;
     align-items: flex-start;
@@ -2694,7 +2813,7 @@ footer {
     width: max-content;
 }
 .forstatups-ourworks {
-    width: 100%;
+    width: 90%;
     max-width: 1580px;
     margin-left: auto;
     display: flex;
@@ -2734,7 +2853,16 @@ footer {
     margin-top: 64px;
 }
 .portfilio-row .works-col img {
-    margin-top: auto;
+    margin-top: 24px;
+}
+.portfoliopagebody {
+    background: white;
+}
+.portfoliopagebody header {
+    background: transparent;
+}
+.portfoliopagebody header .portfoliobackunion {
+    content: url("images/portfoliobackunion-mobile.svg");
 }
 .p-main {
     padding-top: 0;
@@ -2744,8 +2872,8 @@ footer {
 .p-inner {
     width: 90%;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     max-width: 1415px;
     z-index: 11;
     border-radius: 16px;
@@ -2754,9 +2882,10 @@ footer {
 .p-inner .left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 950px;
+    max-width: 1250px;
     z-index: 99;
     box-sizing: border-box;
 }
@@ -2783,11 +2912,16 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-top: 160px;
+}
+.theproblem .title {
+    align-items: center;
 }
 .theproblem img {
     width: 100%;
-    margin-top: 36px;
+    margin-top: 64px;
     border-radius: 16px;
 }
 .problem-solving {
@@ -2796,11 +2930,17 @@ footer {
 .pinner-engagement {
     margin-top: 160px;
 }
+.pinner-engagement .title {
+    align-items: center;
+}
 .pinner-engagement .faq-questions {
     max-width: 100%;
 }
 .pinner-engagement .item-holder {
     max-width: 100%;
+}
+.pinner-faq {
+    margin-top: 44px;
 }
 .pinner-engagement .item-holder h1 {
     color: #2a3342;
@@ -2833,6 +2973,15 @@ footer {
 }
 .pinner-faq .item-heading svg {
     margin-right: 16px;
+}
+.pinner-result .title {
+    align-items: center;
+}
+.pinner-teckstack .title {
+    align-items: center;
+}
+.vanilajs {
+    width: 120px;
 }
 .item-holder.active .item-heading svg path {
     fill: #fff !important;
@@ -2972,7 +3121,7 @@ footer {
     margin-bottom: 20px;
     border-bottom: 1px dashed #dfe6eb;
 }
-.scrollul2 li:last-child{
+.scrollul2 li:last-child {
     border: none;
     margin-bottom: 12px;
 }
@@ -3024,11 +3173,887 @@ footer {
     outline: none;
     margin: 0 auto;
 }
-#portfolioinnercol{
-
+.fstartupresponsive-ourwork {
+    display: none;
 }
+.rrspan {
+    display: none;
+}
+.portfoliopagerow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfoliopagerow a {
+    display: flex;
+}
+.projectinnrer-sminfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.projectinner-sminfocard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid rgba(42, 51, 66, 0.1);
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(12, 15, 48, 0.05);
+    border: 9px solid #f5f7f7;
+    height: max-content;
+}
+.sm-col1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 32px;
+    border-right: 1px dashed rgba(42, 51, 66, 0.2);
+    min-width: 250px;
+}
+.smcol-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.projectinner-sminfocard button {
+    display: flex;
+    padding: 18px 72px 19px 72px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.9px;
+    border-radius: 31px;
+    background: #009fa8;
+    border: none;
+    outline: none;
+}
+.sm-col1 img {
+    margin-right: 16px;
+}
+.sm-col1 p {
+    color: #7a8597;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.9px;
+}
+.sm-col1 h1 {
+    margin-top: 8px;
+    color: #2a3342;
+    font-family: Plus Jakarta Sans;
+    font-size: 24px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.2px;
+}
+.sm-col1.last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
 /* responsive */
 
+@media screen and (max-width: 1366px) {
+    .fstartupservices-inner {
+        zoom: 77%;
+    }
+    .elipse1 {
+        width: 520px;
+        height: 520px;
+    }
+    .elipse2 {
+        width: 813px;
+        height: 983px;
+    }
+    .elipse3 {
+        width: 520px;
+        height: 520px;
+    }
+    .elipse4 {
+        width: 813px;
+        height: 983px;
+    }
+    .elipse5 {
+        width: 813px;
+        height: 983px;
+    }
+    .elipse6 {
+        width: 813px;
+        height: 983px;
+    }
+    .elipse7 {
+        width: 520px;
+        height: 520px;
+    }
+    .elipse8 {
+        width: 520px;
+        height: 520px;
+    }
+
+    .forstartups h1 {
+        font-size: 72px;
+    }
+    .forstartupsbutton {
+        padding: 14px 24px;
+    }
+    .forstartups-services h1 {
+        font-size: 56px;
+    }
+    .counter {
+        font-size: 42px;
+    }
+    .plus {
+        font-size: 42px;
+    }
+    header {
+        width: 75%;
+    }
+    .fliptitlemain p {
+        font-size: 64px;
+    }
+    .fliptitle-wrapper span {
+        font-size: 64px;
+    }
+    .fliptextsection {
+        width: 75%;
+    }
+    .fliptext-main {
+        padding-top: 194px;
+        border-radius: 32px;
+    }
+    .services-main {
+        width: 75%;
+    }
+    .servicesitem {
+        padding: 24px;
+    }
+    .bigitem {
+        max-width: 380px;
+    }
+    .title h1 {
+        font-size: 46px;
+    }
+    .servicecard h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .servicecard p {
+        margin-top: 16px;
+    }
+    .Expertise-main {
+        width: 80%;
+    }
+    .Expertise-main .right {
+        max-width: 605px;
+    }
+    .Expertise-main .header {
+        width: max-content;
+    }
+    .Expertise-main .header li {
+        padding: 12px 24px;
+    }
+    .col1 {
+        padding: 24px;
+        width: max-content;
+    }
+    .engagementmodels-main {
+        max-width: 75%;
+    }
+    .engagementmodels-main .right {
+        zoom: 85%;
+        margin-left: 20px;
+    }
+    .Expertise {
+        padding-bottom: 100px;
+    }
+    .engagement-models {
+        padding-top: 100px;
+    }
+    .threecardscontainer {
+        zoom: 80%;
+    }
+    .awards {
+        padding-top: 100px;
+    }
+    .ourworks-main {
+        width: 75%;
+    }
+    .works-col h1 {
+        font-size: 28px;
+    }
+    .works-col p {
+        font-size: 17px;
+    }
+    .works-col button {
+        width: 50px;
+        height: 50px;
+    }
+    .ourworks {
+        padding-top: 100px;
+    }
+    .talktous-container {
+        margin-top: 100px;
+    }
+    .pinner-teckstack {
+        margin-top: 100px;
+    }
+    .pinner-result {
+        margin-top: 100px;
+    }
+    .pinner-engagement {
+        margin-top: 100px;
+    }
+    .problem-solving {
+        margin-top: 100px;
+    }
+
+    .works-col:first-child {
+        margin-left: 0;
+    }
+    .talktous-container .left h1 {
+        font-size: 32px;
+    }
+    .talktous-container .left h1 span {
+        font-size: 32px;
+    }
+    .talktous-container {
+        width: 80%;
+    }
+    .footer-inner {
+        width: 80%;
+    }
+    .f-right .flinks1 {
+        padding: 0 15px;
+    }
+    .copyright {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .sm-col1 p {
+        color: #7a8597;
+        font-family: Plus Jakarta Sans;
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.9px;
+        width: max-content !important;
+    }
+    .sm-col1 h1 {
+        margin-top: 8px;
+        color: #2a3342;
+        font-family: Plus Jakarta Sans;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -1.2px;
+        width: max-content !important;
+    }
+    .projectinner-sminfocard button {
+        padding: 15px 54px;
+    }
+    .forstartups h1 {
+        font-size: 56px;
+        width: 80%;
+        letter-spacing: -1.4px;
+    }
+    .p-inner .title h1 {
+        font-size: 46px;
+    }
+    #portfolioinnercol .forstartups {
+        padding-top: 0;
+        margin-top: 170px;
+    }
+    .fstartupservices-inner {
+        zoom: 70%;
+    }
+    .startups-section1 .headerlinks li a {
+        font-size: 14px;
+    }
+    .forstartups {
+        padding-top: 150px;
+    }
+    .forstartups-services {
+        margin-top: 140px;
+    }
+    .numberscount-container {
+        margin-top: 42px;
+    }
+    .forstartups-serviceslider {
+        margin-top: 100px;
+    }
+    .forstartups-expertise {
+        margin-top: 100px;
+        padding-bottom: 0;
+    }
+    .portfoliopageinner {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1152px) {
+    .projectinner-sminfocard {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .projectinner-sminfocard button {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .portfolio-main {
+        margin-top: 170px;
+    }
+    .portfoliopagerow {
+        justify-content: center;
+    }
+    .portfilio-row {
+        margin-top: 42px;
+    }
+    header {
+        width: 90%;
+    }
+    .fliptextsection {
+        width: 90%;
+    }
+    .services-main {
+        width: 90%;
+    }
+    .serviceslider-main {
+        width: 90%;
+    }
+    .Expertise-main {
+        width: 90%;
+    }
+    .engagementmodels-main {
+        max-width: 100%;
+        width: 90%;
+    }
+    .threecardscontainer {
+        width: 90%;
+        zoom: 70%;
+    }
+    .ourworks-main {
+        width: 90%;
+    }
+    .ourworks-inner {
+        gap: 30px;
+    }
+    .talktous-container {
+        width: 90%;
+    }
+    .footer-inner {
+        width: 95%;
+    }
+    .portfiliowhcol {
+        margin: 0;
+    }
+    .works-col {
+        margin: 16px 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .awards-inner{
+        background: url("images/image\ 46.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .startups-section1 header{
+        z-index: 9999;
+    }
+    .navmenu-button {
+        display: flex;
+    }
+    header {
+        position: relative;
+        z-index: 9999;
+        background: transparent;
+    }
+    header .talktousbtn {
+        display: none;
+    }
+    .slbtn {
+        display: none !important;
+    }
+    .expertise-row {
+        width: 100%;
+        justify-items: center;
+    }
+    .forstartupsheader-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .forstartups-serviceslider {
+        padding: 0 !important;
+    }
+    .forsme-foragencies .fagencies-servicebox {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .fagencies-inner span {
+        width: 200px;
+        height: 1px;
+        border-bottom: 1px dashed rgba(42, 51, 66, 0.2);
+        margin: 44px 0;
+    }
+    .fagencies-cards {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    .fagencies-card1:first-child {
+        margin-right: 0;
+    }
+    .fagencies-card1:last-child {
+        margin-top: 32px;
+    }
+    .testimonials {
+        margin-top: 100px;
+    }
+    .testimonials .title {
+        margin-left: 25px;
+    }
+    .fagencies-card1 h1 {
+        font-size: 28px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+    .forstartupsheader-images img {
+        max-width: 350px;
+    }
+    .forstartups-services h3 {
+        margin-top: 150px;
+    }
+    .fagencies-inner {
+        flex-direction: column;
+    }
+    .fagencies-servicebox:last-child {
+        margin-left: 0;
+    }
+    .fagencies-servicebox:first-child {
+        margin-right: 0;
+    }
+    .shead1 {
+        flex-direction: column-reverse;
+        position: initial;
+    }
+
+    .fstartupservices-inner {
+        flex-direction: column;
+        zoom: 100%;
+        align-items: center;
+    }
+    .shead1circle {
+        position: initial;
+    }
+    .forstartups-services h1 {
+        margin: 0 auto;
+    }
+    .sbox2 {
+        margin-left: 0;
+        margin-top: 44px;
+    }
+    .sboxhead h1 {
+        font-size: 32px;
+        margin-top: 32px;
+    }
+    .forstatups-ourworks {
+        display: none;
+    }
+    .fstartupresponsive-ourwork {
+        display: flex;
+    }
+    .sbox3 {
+        position: initial;
+        margin-left: 0;
+        margin-top: 44px;
+    }
+    .shead3 {
+        position: initial;
+        flex-direction: column;
+    }
+    .shead1span {
+        display: none;
+    }
+    .headerlinks {
+        display: none;
+    }
+    .navigation-menu .headerlinks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .bigitem {
+        max-width: 100%;
+    }
+    .servicesitem {
+        max-width: 100%;
+    }
+    .serviceslider-main {
+        max-width: 100%;
+    }
+    .Expertise-main {
+        flex-wrap: wrap;
+    }
+    .thcard1,
+    .thcard2 {
+        max-width: 100%;
+    }
+    .thcard2 {
+        margin-left: 0;
+        margin-top: 32px;
+    }
+    .threecardscontainer div {
+        border-radius: 14px;
+    }
+    .awardsrow {
+        grid-template-columns: 1fr 1fr;
+    }
+    .awardscol {
+        margin: 24px 15px;
+    }
+    .engagementmodels-main {
+        flex-wrap: wrap;
+    }
+    .engagementmodels-main .right {
+        zoom: 100%;
+    }
+    .engagementmodels-main .right {
+        margin-left: 0;
+        margin-top: 48px;
+    }
+    .awards-inner .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .awards-inner {
+        margin-left: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    .awards-inner .title {
+        align-items: center;
+    }
+    .awardscol {
+        width: 100%;
+        max-width: 175px;
+        align-items: center;
+    }
+    .awardsrow {
+        margin-top: 70px;
+    }
+    .rrspan {
+        display: flex;
+    }
+    .foragencies-section {
+        background: url("images/For\ Agencies\ -\ mob.svg");
+        background-position: 0 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .forstartup-section {
+        background: url("images/For\ startups\ -\ mob.svg");
+        background-position: 0 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .forsme-section {
+        background: url("images/For\ SME\ -\ mob.svg");
+        background-position: 0 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .startups-section1 .backgound {
+        display: none;
+    }
+    .projectinner-sminfocard {
+        flex-direction: column;
+    }
+    .sm-col1 {
+        padding-right: 0;
+        border-right: 0;
+        flex-direction: column;
+        padding: 25px 48px;
+        padding-top: 0;
+        margin-top: 32px;
+        min-width: 100%;
+    }
+    .smcol-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .projectinner-sminfocard {
+        padding: 40px 25px;
+        padding-top: 8px;
+    }
+    .sm-col1.last-child {
+        padding-right: 48px;
+    }
+    .sm-col1 img {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .sm-col1 span {
+        width: 104px;
+        height: 1px;
+        display: flex;
+        border-bottom: 1px dashed rgba(42, 51, 66, 0.2);
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .p-inner {
+        margin-top: 90px;
+    }
+    .pinner-teckstack .right {
+        margin-top: 24px;
+    }
+    .pinner-teckstack {
+        margin-top: 100px;
+    }
+    .pinner-result {
+        margin-top: 100px;
+    }
+    .pinner-engagement {
+        margin-top: 100px;
+    }
+    .problem-solving {
+        margin-top: 100px;
+    }
+    .copyright {
+        flex-wrap: wrap;
+    }
+    .talktous-container {
+        flex-wrap: wrap;
+    }
+    .talktous-container .left .ttusgreen {
+        display: none;
+    }
+    .talktous-container .right {
+        margin-top: 32px;
+    }
+    .ourworks-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .works-col {
+        max-width: 100%;
+        max-height: max-content;
+    }
+    .threecards {
+        padding-top: 100px;
+    }
+    .services-slider {
+        padding: 100px 0;
+    }
+    .fliptitle-wrapper span {
+        font-size: 48px;
+    }
+    .fliptitlemain p {
+        font-size: 48px;
+    }
+    .fliptext-main .t2 {
+        margin-top: 0px;
+    }
+    .clientslider-wrapper {
+        margin-top: 65px;
+    }
+    .fliptext-main {
+        padding-top: 145px;
+    }
+    .f-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .flinks1 {
+        margin: 15px;
+        padding: 0;
+    }
+    .f-right .flinks1 {
+        padding: 0;
+    }
+    .projectinner-sminfocard {
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 600px) {
+    .p-inner .title h1 {
+        font-size: 39px;
+    }
+    .copyright p:last-child {
+        margin-top: 24px;
+    }
+    .footer-inner {
+        flex-direction: column;
+    }
+    .f-right {
+        margin-top: 32px;
+    }
+    .talktous-container .right {
+        width: 100%;
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    .talktous-container .right img {
+        margin-top: 24px;
+        width: 100%;
+    }
+    .talktous-container .informationtexts {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .ttuscontact1 img {
+        width: max-content !important;
+    }
+    .talktous-container {
+        padding: 28px;
+    }
+    .expheader {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        overflow-x: scroll;
+    }
+    .engmod-header {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        overflow-x: scroll;
+    }
+    .Expertise-main .header {
+        width: 100%;
+        min-width: 600px;
+        margin-top: 24px;
+    }
+    .engmod-header .header {
+        width: 100%;
+        min-width: 600px;
+    }
+    .expertise-row {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .engagementbox1 {
+        padding: 24px;
+    }
+    .staffaugmentation {
+        font-size: 20px;
+    }
+    .engaginfo2 div h1 {
+        font-size: 17px;
+    }
+    .talktous-container .left h1 br {
+        display: none;
+    }
+    .footer-inner {
+        background-size: 350%;
+        background-repeat: no-repeat;
+        padding-bottom: 137px;
+        padding-top: 70px;
+        background-position: bottom;
+    }
+    .expertise-row .col1 {
+        width: 130px;
+        padding: 18px 5px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .works-col p {
+        font-size: 15px;
+    }
+    .forstartups h1 {
+        font-size: 44px;
+        letter-spacing: -1.4px;
+    }
+    .forstartups-services h1 {
+        font-size: 36px;
+    }
+    .fagencies-servicebox h1 {
+        font-size: 28px;
+    }
+    .testimonials {
+        width: 100%;
+    }
+    .serviceslider-main {
+        width: 100%;
+    }
+    .serviceslider-main .title {
+        margin-left: 25px;
+    }
+    .fliptitle-wrapper span {
+        font-size: 32px;
+        letter-spacing: -1.4px;
+    }
+    .fliptitlemain p {
+        font-size: 32px;
+        letter-spacing: -1.4px;
+    }
+    .fliptitle-wrapper {
+        height: 65px;
+    }
+    .sm-col1 {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+@media screen and (max-width: 425px) {
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .fliptitlemain p {
+        font-size: 28px;
+    }
+    .fliptext-main {
+        padding-top: 0;
+    }
+    .fliptitle-wrapper span {
+        font-size: 28px;
+    }
+    .counter {
+        font-size: 34px;
+    }
+    .plus {
+        font-size: 34px;
+    }
+    .awardscol p {
+        font-size: 15px;
+    }
+    .engagement-models .title h1 {
+        font-size: 36px;
+        letter-spacing: -1.4px;
+    }
+}
 @media only screen and (max-width: 375px) {
     .item-heading {
         font-size: 20px;

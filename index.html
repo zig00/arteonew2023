@@ -15,6 +15,24 @@
 </head>
 
 <body class="body" id="body">
+    <div class="navigation-menu" id="navmenu">
+        <ul>
+            <li><a href="">Services</a></li>
+            <li><a href="">Our works</a></li>
+            <div class="dropdownlinknav" id="navmenudropdownlink">
+                <a class="navdropdownmainlink">Expertise</a>
+                <div class="servicesdropdown" id="navmenudropdowninner">
+                    <li><a class="gr" href="">For Startups</a></li>
+                    <li><a class="gr" href="">For Agencies</a></li>
+                    <li><a class="gr" href="">For SME</a></li>
+                </div>
+            </div>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+            <button>Talk to us</button>
+        </ul>
+
+    </div>
     <header>
         <a href="index.html" class="headerlogo">
             <img src="images/Layer 2.svg" alt="">
@@ -34,12 +52,13 @@
                     <li><a href="forprograms.html">Machine Learning</a></li>
                 </ul>
             </li>
-            <li><a href="">Benefits</a></li>
-            <li><a href="">Testimonials</a></li>
-            <li><a href="">FAQ</a></li>
+            <li><a href="">Our works</a></li>
+            <li><a href="">Expertise</a></li>
+            <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>
         </ul>
         <button class="talktousbtn">Talk to us</button>
+        <button class="navmenu-button" id="navmenubtn"><img src="images/Frame 14.svg" alt=""></button>
     </header>
     <section class="fliptextsection">
         <div class="fliptext-main">
@@ -97,12 +116,12 @@
                     <p>Outstaffing is a strategy where companies hire external professionals or teams from...</p>
                 </div>
                 <div class="servicesitem">
-                    <img src="images/Frame 21.svg" alt="">
+                    <img src="images/Frame 21 (1).svg" alt="">
                     <h1>Staff Augmentation</h1>
                     <p>Outstaffing is a strategy where companies hire external professionals or teams from...</p>
                 </div>
                 <div class="servicesitem">
-                    <img src="images/Frame 454 (1).svg" alt="">
+                    <img src="images/Frame 21 (2).svg" alt="">
                     <h1>AI and Machine Learning</h1>
                     <p>Outstaffing is a strategy where companies hire external professionals or teams from...</p>
                 </div>
@@ -159,179 +178,116 @@
                     products and drive their growth with the appropriate marketing stack.</h4>
             </div>
             <div class="right">
-                <ul class="header">
-                    <li onclick="openrow1()" class="active">AR/VR</li>
-                    <li onclick="openrow2()">Front-end</li>
-                    <li onclick="openrow3()">Back-end</li>
-                    <li onclick="openrow4()">Mobile app</li>
-                    <li onclick="openrow5()">DevOps</li>
-                </ul>
+                <div class="expheader">
+                    <ul class="header">
+                        <li onclick="openrow1()" class="active">AR/VR</li>
+                        <li onclick="openrow2()">Front-end</li>
+                        <li onclick="openrow3()">Back-end</li>
+                        <li onclick="openrow4()">Mobile app</li>
+                        <li onclick="openrow5()">DevOps</li>
+                    </ul>
+                </div>
+
                 <div class="expertise-row r1" id="r1">
                     <div class="col1">
                         <img src="images/image 31.svg" alt="">
                         <p>Unity Engine</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/image 32.svg" alt="">
                         <p>AR Core</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/ARkit-removebg-preview 1.svg" alt="">
                         <p>AR Kit</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/image 33.svg" alt="">
                         <p>Vuforia Engine</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
                     </div>
                     <div class="col1">
                         <img src="images/unreal.svg" alt="">
                         <p>Unreal engine</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/mediapipe.svg" alt="">
                         <p>Mediapipe</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/opencv.svg" alt="">
                         <p>OpenCV</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
                     </div>
                 </div>
                 <div class="expertise-row r2" id="r2">
                     <div class="col1">
-                        <img src="images/node.svg" alt="">
-                        <p>Node.js</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
+                        <img src="images/image 35.svg" alt="">
+                        <p>HTML/CSS</p>
+                    </div>
+                    <div class="col1 vanilajs">
+                        <img src="images/jsvanila.svg" alt="">
+                        <p>Javascript Vanilla</p>
                     </div>
                     <div class="col1">
-                        <img src="images/laravel.svg" alt="">
-                        <p>Laravel</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                    </div>
-                    <div class="col1">
-                        <img src="images/c#.svg" alt="">
-                        <p>C#</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                    </div>
-                    <div class="col1">
-                        <img src="images/javaspring.svg" alt="">
-                        <p>Java spring</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
-                    </div>
-                    <div class="col1">
-                        <img src="images/golang.svg" alt="">
-                        <p>Golang</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
+                        <img src="images/react.svg" alt="">
+                        <p>React</p>
                     </div>
                 </div>
                 <div class="expertise-row r3" id="r3">
                     <div class="col1">
                         <img src="images/node.svg" alt="">
                         <p>Node.js</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/laravel.svg" alt="">
                         <p>Laravel</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/csharp.svg" alt="">
                         <p>C#</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/javaspring.svg" alt="">
                         <p>Java spring</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
                     </div>
                     <div class="col1">
                         <img src="images/golang.svg" alt="">
                         <p>Golang</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
                     </div>
                 </div>
                 <div class="expertise-row r4" id="r4">
                     <div class="col1">
                         <img src="images/java.svg" alt="">
                         <p>Java</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/kotlin.svg" alt="">
                         <p>Kotlin</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/swift.svg" alt="">
                         <p>Swift 5</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/swiftui.svg" alt="">
                         <p>Swift UI</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
                     </div>
                     <div class="col1">
                         <img src="images/reactnative.svg" alt="">
                         <p>React Native</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
-                        <img src="images/Line 12.svg" alt="" class="span3">
                     </div>
                 </div>
                 <div class="expertise-row r5" id="r5">
                     <div class="col1">
                         <img src="images/python.svg" alt="">
                         <p>Python</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/opencv.svg" alt="">
                         <p>OpenCV</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                     <div class="col1">
                         <img src="images/simplex.svg" alt="">
                         <p>Simplex</p>
-                        <img src="images/Line 12.svg" alt="" class="span1">
-                        <img src="images/Line 16.svg" alt="" class="span2">
                     </div>
                 </div>
             </div>
@@ -346,11 +302,14 @@
                     products and drive their growth with the appropriate marketing stack.</h4>
             </div>
             <div class="right">
-                <ul class="header">
-                    <li onclick="openeng1()" class="active">Staff Augmentation</li>
-                    <li onclick="openeng2()">Dedicated Agile Team</li>
-                    <li onclick="openeng3()">Fixed Scope</li>
-                </ul>
+                <div class="engmod-header">
+                    <ul class="header">
+                        <li onclick="openeng1()" class="active">Staff Augmentation</li>
+                        <li onclick="openeng2()">Dedicated Agile Team</li>
+                        <li onclick="openeng3()">Fixed Scope</li>
+                    </ul>
+                </div>
+
                 <div class="engagementbox1" id="engbox1">
                     <p class="staffaugmentation">Staff Augmentation</p>
                     <p class="staffaugmentationinfo">
@@ -499,7 +458,7 @@
 
                 </div>
             </div>
-            <img src="images/Frame 227.svg" alt="">
+            <!-- <img src="images/Frame 227.svg" alt=""> -->
         </div>
     </section>
     <section class="ourworks reveal">
@@ -509,16 +468,34 @@
                 <h1>Our works</h1>
             </div>
             <div class="ourworks-inner">
-                <div class="ourworkcontainer">
-                    <img src="images/image 10.svg" alt="">
-                    <p>Case study</p>
-                    <h1>Digital Agency - Landing Page</h1>
-                </div>
-                <div class="ourworkcontainer">
-                    <img src="images/image 10.svg" alt="">
-                    <p>Case study</p>
-                    <h1>Digital Agency - Landing Page</h1>
-                </div>
+                <a href="portfolio-inner.html">
+                    <div class="works-col greencol">
+                        <h1>Gamo</h1>
+                        <p>Stadiums booking online service</p>
+                        <span></span>
+                        <div class="lang-row">
+                            <p class="fstartup-text">Web Design</p>
+                            <p class="fstartup-text">SaaS</p>
+                            <p class="fstartup-text">UI/UX</p>
+                        </div>
+                        <img src="images/gamo.svg" alt="">
+                        <button class="projectdetailsutton"><img src="images/send.svg" alt=""></button>
+                    </div>
+                </a>
+                <a href="portfolio-inner.html">
+                    <div class="works-col whitecol">
+                        <h1>Gamo</h1>
+                        <p>Stadiums booking online service</p>
+                        <span></span>
+                        <div class="lang-row">
+                            <p class="fstartup-text">Web Design</p>
+                            <p class="fstartup-text">SaaS</p>
+                            <p class="fstartup-text">UI/UX</p>
+                        </div>
+                        <img src="images/gamo.svg" alt="">
+                        <button class="projectdetailsutton"><img src="images/send.svg" alt=""></button>
+                    </div>
+                </a>
             </div>
             <p class="moreprojectstxt">Don’t see what you’re looking for?</p>
             <a href="portfolio.html"><button>See portfolio</button></a>
@@ -573,39 +550,38 @@
             </div>
             <div class="f-right">
                 <div class="flinks1">
-                    <h1>Resources</h1>
+                    <h1>Navigation</h1>
                     <ul>
-                        <li><a href="">Customers</a></li>
-                        <li><a href="">Ebook & Guides</a></li>
-                        <li><a href="">Roadmap</a></li>
-                        <li><a href="">API Documentation</a></li>
-                    </ul>
-                </div>
-                <div class="flinks1">
-                    <h1>Platform</h1>
-                    <ul>
-                        <li><a href="">Analitycs</a></li>
-                        <li><a href="">Plans</a></li>
-                        <li><a href="">Collaboration</a></li>
-                        <li><a href="">Project Management</a></li>
-                    </ul>
-                </div>
-                <div class="flinks1">
-                    <h1>Support</h1>
-                    <ul>
-                        <li><a href="">Customer Service</a></li>
-                        <li><a href="">Help Center</a></li>
-                        <li><a href="">Free Tools</a></li>
-                        <li><a href="">Community</a></li>
-                    </ul>
-                </div>
-                <div class="flinks1">
-                    <h1>Partnership</h1>
-                    <ul>
-                        <li><a href="">Become a Partner</a></li>
-                        <li><a href="">Affiliate Program</a></li>
-                        <li><a href="">Our Partner</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Our Works</a></li>
+                        <li><a href="">Expertise</a></li>
+                        <li><a href="">Blog</a></li>
                         <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Services</h1>
+                    <ul>
+                        <li><a href="">Augmented Reality</a></li>
+                        <li><a href="">Virtual Reality</a></li>
+                        <li><a href="">Outsourcing</a></li>
+                        <li><a href="">Staff Augmentation</a></li>
+                        <li><a href="">AI & Machine Learning</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Expertise</h1>
+                    <ul>
+                        <li><a href="">For Startups</a></li>
+                        <li><a href="">For Agencies</a></li>
+                        <li><a href="">For SME</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Social Media</h1>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Linkedin</a></li>
                     </ul>
                 </div>
             </div>
@@ -623,7 +599,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
+
     <script src="main.js"></script>
+    <script src="navmenu.js"></script>
 </body>
 
 </html>

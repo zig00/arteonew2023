@@ -41,6 +41,14 @@ $(document).ready(function () {
         arrows: false,
         responsive: [
             {
+                breakpoint: 1445,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                },
+            },
+            {
                 breakpoint: 850,
                 settings: {
                     slidesToShow: 2,
@@ -104,6 +112,15 @@ $(document).ready(function () {
         swipeToSlide: true,
         arrows: false,
         responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    centermode:false,
+                },
+            },
             {
                 breakpoint: 850,
                 settings: {

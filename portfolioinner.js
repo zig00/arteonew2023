@@ -141,28 +141,6 @@ var body = document.getElementById("body")
     
 //   }
 
-$(document).ready(function(){
-
-    
-    var top=  $('#scrollcontainer').offset().top
-    var left=  $('#scrollcontainer').offset().left
-    const offset = top-100
-    $(window).scroll(function(){
-        var n = (1000-($(document).height()-($(window).scrollTop() + $(window).height())))
-
-        if($(document).scrollTop() > offset) {
-            var newPos = $(document).scrollTop()-offset;
-            $('#scrollcontainer').css( {position:'fixed',left,top:top-offset,bottom:'auto','margin-left':0});
-        }
-        else {
-            $('#scrollcontainer').css( {position:'relative',left:'auto',bottom:'auto',top:'auto','margin-left':40});
-        }
-
-        if(n>=0) {
-            $('#scrollcontainer').css( {position:'fixed',left,bottom:n+60,top:'auto','margin-left':0});
-        }
-    })
-})
 
 // $(document).ready(function () {
 //     if ($(window).width() > 580) {
