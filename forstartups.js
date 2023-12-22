@@ -227,6 +227,7 @@ $(document).ready(function(){
 var body = document.querySelector('body');
 var isvisiblecontainer = false;
 var numbercont = document.getElementById("numberscountcont")
+var numbercont2 = document.getElementById("numberscountcont")
 
 
 var elementVisible = 250;
@@ -252,7 +253,7 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 // header book a call animation
-window.addEventListener('scroll', numberscounterfunc)
+window.addEventListener('scroll', numberscounterfunc,numberscounterfunc2)
 var body = document.getElementById("body")
 
 
@@ -292,8 +293,20 @@ function numberscounterfunc() {
 
     // }
 }
+function numberscounterfunc2() {
+    let scroll = this.scrollY;
+    var isvisiblee = isScrolledIntoView(numbercont2)
 
-var numbercont = document.getElementById("numberscountcont")
+    if (isvisiblee && !isvisiblecontainer) {
+        isvisiblecontainer = true;
+        animateText("count11", 40, 30)
+        animateText("count22", 35, 30)
+        animateText("count33", 4, 350)
+
+    }
+}
+
+
 
 
 

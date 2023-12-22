@@ -29,6 +29,15 @@ button {
     opacity: 0;
     transition: 0.6s all ease;
 }
+.fagenciesbluetext {
+    border-radius: 200px;
+    background: rgba(0, 137, 195, 0.1) !important;
+    color: #0089c3 !important;
+}
+.ttusblue {
+    border-radius: 31px;
+    background: #0089c3 !important;
+}
 .navigation-menu {
     width: 100%;
     height: 100vh;
@@ -38,6 +47,7 @@ button {
     z-index: 999;
     position: absolute;
     top: 0;
+    padding-bottom: 20px;
 }
 .navmenu-button {
     display: none;
@@ -131,16 +141,18 @@ header {
 .navigation-menu ul {
     position: inherit;
     background: transparent;
-    padding-top: 150px !important;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
+    height: 450px;
     flex-direction: column;
+    padding-top: 150px;
+    overflow-y: scroll;
 }
-.navdropdownmainlink{
-    margin:  18px 0;
-    color: #2a3342 !important; 
+.navdropdownmainlink {
+    margin: 18px 0;
+    color: #2a3342 !important;
 }
 .navigation-menu ul li {
     list-style-type: none;
@@ -219,11 +231,11 @@ header ul #joineventlink:not(:hover) .linkdropdown {
 #joineventlink {
     position: relative;
 }
-.gr{
-    color: #7A8597 !important;
+.gr {
+    color: #7a8597 !important;
 }
 .dropdownlinknav a {
-    color: #7A8597;
+    color: #7a8597;
     font-family: Plus Jakarta Sans;
     font-size: 24px;
     font-style: normal;
@@ -556,6 +568,49 @@ section {
     box-shadow: 0px 10px 20px 0px rgba(12, 15, 48, 0.05);
     margin: 12px;
     flex-wrap: nowrap;
+    position: relative;
+}
+.servicesitem button {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 31px;
+    background: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    z-index: 33;
+    margin-top: 32px;
+    margin-right: 32px;
+}
+.servicesitem button img {
+    width: max-content !important;
+}
+.servicesitem .hoveranim {
+    visibility: hidden;
+    position: absolute;
+    z-index: 22;
+    width: 100%;
+    height: 115px;
+    background: linear-gradient(180deg, #009fa8 0%, rgba(0, 159, 168, 0) 100%);
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    left: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 0.5s all ease-in-out;
+}
+.servicesitem:hover .hoveranim {
+    visibility: visible;
+    animation: openopacityanim 0.6s;
+}
+.servicesitem:not(:hover) .hoveranim {
+    visibility: hidden;
+    animation: closeopacityanim 0.6s;
 }
 .servicesitem img {
     width: 100%;
@@ -733,9 +788,7 @@ section {
         0px 3px 1px 0px rgba(0, 0, 0, 0.04),
         0px 3px 8px 0px rgba(0, 0, 0, 0.12);
 }
-.engagement-models .title h1 {
-    max-width: 390px;
-}
+
 .engagementmodels-main .right {
     display: flex;
     width: 100%;
@@ -1461,6 +1514,20 @@ section {
     opacity: 0.6;
     font-size: 18px;
 }
+.forsme-txt {
+    border-radius: 200px;
+    background: rgba(143, 17, 174, 0.1) !important;
+    color: #8f11ae !important;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+.eng-purple {
+    color: #8f11ae !important;
+}
 /* contact */
 .Contact {
     width: 100%;
@@ -2087,9 +2154,8 @@ footer {
     right: 90px;
 }
 .sbox3 {
-    margin-left: auto;
+    margin-left: 85px;
     position: relative;
-    left: 40px;
 }
 .sbox3 .shead1span {
     margin-left: 5px;
@@ -2099,6 +2165,9 @@ footer {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 200px;
+}
+.forstartups-serviceslider .servicecard {
+    min-height: 500px !important;
 }
 .forstartup-theprocess {
     width: 100%;
@@ -3263,10 +3332,15 @@ footer {
     padding-right: 0;
     border-right: none;
 }
-
+.forstatups-ourworks .title {
+    margin-bottom: 64px;
+}
 /* responsive */
 
 @media screen and (max-width: 1366px) {
+    .sboxhead h1 {
+        font-size: 32px !important;
+    }
     .fstartupservices-inner {
         zoom: 77%;
     }
@@ -3571,13 +3645,13 @@ footer {
     .portfoliopagebody header .portfoliobackunion {
         content: url("images/portfoliobackunion-mobile.svg");
     }
-    .awards-inner{
+    .awards-inner {
         background: url("images/image\ 46.svg");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
-    .startups-section1 header{
+    .startups-section1 header {
         z-index: 9999;
     }
     .navmenu-button {
@@ -3586,7 +3660,11 @@ footer {
     header {
         position: relative;
         z-index: 9999;
-        background: transparent;
+        background: white;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
     }
     header .talktousbtn {
         display: none;
