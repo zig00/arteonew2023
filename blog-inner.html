@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Arttteo</title>
+</head>
+
+<body class="portfoliopagebody body" id="body" onscroll="bodyscrollfunc()">
+    <div class="navigation-menu" id="navmenu">
+        <ul>
+            <div class="dropdownlinknav" id="navmenudropdownlink2">
+                <a class="navdropdownmainlink">Expertise</a>
+                <div class="servicesdropdown" id="navmenudropdowninner2">
+                    <li><a class="gr" href="">Augmented Reality</a></li>
+                    <li><a class="gr" href="">Virtual Reality</a></li>
+                    <li><a class="gr" href="">Outsourcing</a></li>
+                    <li><a class="gr" href="">Staff Augmentation</a></li>
+                    <li><a class="gr" href="">AI and Machine Learning</a></li>
+                </div>
+            </div>
+            <li><a href="">Our works</a></li>
+            <div class="dropdownlinknav" id="navmenudropdownlink">
+                <a class="navdropdownmainlink">Expertise</a>
+                <div class="servicesdropdown" id="navmenudropdowninner">
+                    <li><a class="gr" href="">For Startups</a></li>
+                    <li><a class="gr" href="">For Agencies</a></li>
+                    <li><a class="gr" href="">For SME</a></li>
+                </div>
+            </div>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+
+    </div>
+    <header>
+        <a href="index.html" class="headerlogo">
+            <img src="images/whitelogo.svg" alt="">
+            <div class="headerlogotitle">
+                <h3>Arttteo</h3>
+                <p>Software Development</p>
+            </div>
+        </a>
+        <ul class="headerlinks">
+            <li id="joineventlink">
+                <a href="">Services</a>
+
+                <ul class="linkdropdown" id="dropdlink">
+                    <li><a href="forstartups.html">Augmented Reality</a></li>
+                    <li><a href="forinvestors.html">Virtual Reality</a></li>
+                    <li><a href="forprograms.html">Machine Learning</a></li>
+                    <li><a href="forprograms.html">Outsourcing</a></li>
+                    <li><a href="forprograms.html">Staff Augmentation</a></li>
+                </ul>
+            </li>
+            <li><a href="">Our works</a></li>
+            <li id="joineventlink">
+                <a href="">Expertise</a>
+
+                <ul class="linkdropdown" id="dropdlink">
+                    <li><a href="forstartups.html">For Startup</a></li>
+                    <li><a href="forinvestors.html">For Agencies</a></li>
+                    <li><a href="forsme.html">For SME</a></li>
+                </ul>
+            </li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <button class="talktousbtn">Talk to us</button>
+        <button class="navmenu-button" id="navmenubtn"><img id="navmenuimg" src="images/Frame 14.svg" alt=""></button>
+    </header>
+    <section>
+        <div class="blog-information">
+            <div class="left">
+                <p class="blogcardgreentext">Design</p>
+                <h1>Building smarter Figma components: crafting for efficiency</h1>
+                <span class="timetoread">6 min read</span>
+                <img src="images/image 48 (1).svg" alt="">
+                <p class="bloginfo-text">Oxygen, doctolib’s design system, has existed for more than three years now and
+                    is becoming more and more robust. Three years of adding new components, new processes, breaking
+                    changes due to Figma’s new features (such as auto-layout), component updates or recraft, drifts
+                    (discrepancies between design component and dev component)…
+                    All this leads to a Figma library (formerly called 💠Core components) that was closer to a
+                    Frankenstein than a lean and refined library as we would have liked.</p>
+                <p class="bloginfo-text"></p>
+
+                <h2 class="bloginfo-title">On the Design System side, we discovered:</h2>
+                <li>Lots of component properties were unused, or even worse, bypassed by designers, and some of them
+                    told us components were over-engineered</li>
+                <li>There was no official nomenclature of properties, meaning from a component to another a similar
+                    property had a different name</li>
+                <li>We also struggled with what we call “Ghost components”, which are instances without source
+                    components.</li>
+                <p class="bloginfo-text">We realized that it was time to do a big clean up and create a version two of
+                    our Design System
+                    The horrible truth
+                    To address the more important topic (and clearly the blocking one) — file weight — we started using
+                    the Layer Counter plugin. This plugin was really helpful to weigh our components and then measure
+                    our progress and impact.
+                    And then, we discovered the horrible truth: files were heavy because our components were not heavy,
+                    they were HUUUUGE! And honestly, we were shocked!
+                    Let’s take the 💠Pill component as example. This component has many variants, multiple semantic
+                    color themes, includes nested components from the Design System (Icon buttons, Avatars, Icons,
+                    Spinner Loader, Badges…) and has several available sizes, types, etc.
+                    Available customization of the 💠Pill component
+                    And this 💠Pill was using…. 8,684 layers 😱.NB: depending on the selection (source component or
+                    instance) the Layer Counter result may vary a bit.
+                    Layer Counter plugin result on a 💠Pill instance.
+                    Question then was:How to create lightweight and resource-efficient components, maximizing efficiency
+                    without sacrificing quality?
+                    After a round of ideations and research, we decided to focus on 3 axis:
+                    1) Remove all the useless nested components and create private nested
+                    In the 💠Pill use case (and in all our components in the feedback family), the semantic icons are
+                    not meant to be changed, so we removed the 💠Icon component used as nested in favor of the SVG
+                </p>
+                <p class="bloginfo-text">icon from our icon library. This helped us to:</p>
+                <li>Remove a flexibility to the Product Designers that was not existing on the dev component (and then
+                    avoid handoff misunderstanding and non-compliant customization in production)</li>
+                <li>Remove a huge load of layers</li>
+                <li>Remove the display of the useless properties on the right sidebar, which automatically simplified
+                    the properties panel and its usage</li>
+
+            </div>
+            <div class="right scrollcard" id="scrollcard">
+                <div class="talktous-container">
+                    <div class="left">
+                        <div class="hshtext">
+                            <h1 class="t1">Focus on what matters,<br> <span>outsource the rest</span></h1>
+                        </div>
+                        <p class="ttr">Drive innovation through outsourcing collaborations.</p>
+                    </div>
+                    <div class="right">
+                        <img class="talktousimg" src="images/Frame 239.svg" alt="">
+                        <div class="informationtexts">
+                            <h1>Tbilisi</h1>
+                            <div class="ttuscontact1">
+                                <img src="images/Frame 45.svg" alt="">
+                                <p>+995 571 990 229</p>
+                            </div>
+                            <div class="ttuscontact1">
+                                <img src="images/Frame 240.svg" alt="">
+                                <p>Innovation Street # 7, Tbilisi, Georgia</p>
+                            </div>
+                            <div class="ttuscontact1">
+                                <img src="images/Frame 241.svg" alt="">
+                                <p>marketing@arttteo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="ttusgreen">Talk to us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nextblogs">
+        <div class="title">
+            <p>blog</p>
+            <h1>Our works</h1>
+        </div>
+        <div class="nextblogs-inner">
+            <div class="blog-col1">
+                <img src="images/image 48.svg" alt="">
+                <p class="blogcardgreentext">Design</p>
+                <h1>Building smarter Figma components: crafting for efficiency</h1>
+                <span>6 min read</span>
+            </div>
+            <div class="blog-col1 rightblog">
+                <img src="images/image 48.svg" alt="">
+                <p class="blogcardgreentext">Design</p>
+                <h1>Building smarter Figma components: crafting for efficiency</h1>
+                <span>6 min read</span>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-inner">
+            <div class="f-left">
+                <div class="websitelogo">
+                    <a href="index.html">
+                        <img src="images/Layer 2.svg" alt="">
+                        <div class="webslogotexts">
+                            <p class="fp1">Arttteo</p>
+                            <p class="fp2">Software Development</p>
+                        </div>
+                    </a>
+                </div>
+                <p class="fp3">Outstaffing never be so easy!</p>
+            </div>
+            <div class="f-right">
+                <div class="flinks1">
+                    <h1>Navigation</h1>
+                    <ul>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Our Works</a></li>
+                        <li><a href="">Expertise</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Services</h1>
+                    <ul>
+                        <li><a href="">Augmented Reality</a></li>
+                        <li><a href="">Virtual Reality</a></li>
+                        <li><a href="">Outsourcing</a></li>
+                        <li><a href="">Staff Augmentation</a></li>
+                        <li><a href="">AI & Machine Learning</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Expertise</h1>
+                    <ul>
+                        <li><a href="">For Startups</a></li>
+                        <li><a href="">For Agencies</a></li>
+                        <li><a href="">For SME</a></li>
+                    </ul>
+                </div>
+                <div class="flinks1">
+                    <h1>Social Media</h1>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Arttteo 2023. All rights reserved</p>
+            <p>Terms and Conditions
+                ·
+                Privacy Policy</p>
+        </div>
+    </footer>
+    <script src="bloginner.js"></script>
+    <script src="navmenu.js"></script>
+</body>
+
+</html>
