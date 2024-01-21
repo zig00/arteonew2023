@@ -6,25 +6,37 @@ var navmenuimg = document.getElementById("navmenuimg")
 var navmenudropdownlink2 = document.getElementById("navmenudropdownlink2")
 var navmenudropdowninner2 = document.getElementById("navmenudropdowninner2")
 var body = document.getElementById("body")
+var artt1 = document.getElementById("artt1")
+var artt2 = document.getElementById("artt2")
+var foragenciesnavbtn = document.getElementById("foragenciesnavbtn")
+var artttelogo = document.getElementById("artttelogo")
+
 
 navmenubtn.addEventListener("click", () => {
-    if (navmenu.style.display != "flex" || navmenu.style.display == "") {
+    if (navmenu.style.display != "flex" || navmenu.style.display == "" && artt1 !== null && artt2 !== null && foragenciesnavbtn !== null && artttelogo !== null ) {
         navmenu.style.display = "flex"
-        navmenu.style.animation = "openopacityanim 1s"
+        navmenu.style.animation = "none"
+        document.getElementById("navmenubtnimage").src = "/images/x.svg";
         $('body, html').css('overflow' , 'hidden');
-        navmenuimg.style.filter = "brightness(0)"
+        document.getElementById("artttelogo").src = "/images/Layer 2.svg"
+        document.getElementById("artt1").style.color = "#2a3342"
+        document.getElementById("artt2").style.color = "#7a8597"
+       
     }
     else {
 
-        navmenu.style.animation = "closeopacityanim 1s"
-        document.body.style.overflowY = "scroll";
-        navmenuimg.style.filter = "brightness(1)"
+        navmenu.style.animation = "none"
+        document.getElementById("artttelogo").src = "/images/whitelogo.svg"
+        foragenciesnavbtn.src = "/images/whitebars.png"
+        artt1.style.color = "#fff"
+        artt2.style.color = "#fff"
+
+      
         navmenudropdowninner.style.display = "none"
         setTimeout(() => {
             navmenu.style.display = "none"
-            document.body.style.overflowY = "scroll";
-
-        }, 800);
+            $('body, html').css('overflow' , 'scroll');
+        }, 100);
     }
 
 })

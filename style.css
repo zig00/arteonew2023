@@ -62,6 +62,9 @@ button {
     position: relative;
     z-index: 99999;
 }
+a {
+    text-decoration: none;
+}
 .navmenu-button img {
     width: 100%;
     height: 100%;
@@ -426,8 +429,6 @@ section {
     background: transparent;
 }
 
-
-
 .engmod-header::-webkit-scrollbar {
     width: 0px;
 }
@@ -442,8 +443,6 @@ section {
     background: transparent;
 }
 
-
-
 .expheader::-webkit-scrollbar {
     width: 0px;
 }
@@ -457,8 +456,6 @@ section {
     border-radius: 3px;
     background: transparent;
 }
-
-
 
 .fliptitle-wrapper span {
     display: block;
@@ -3388,6 +3385,12 @@ footer {
 .blog-inner .title {
     width: 100%;
 }
+.bloginner-video{
+    margin-top: 24px;
+    width: 100%;
+    min-height: 370px;
+    border-radius: 16px;
+}
 .blog-inner .title input {
     display: inline-flex;
     padding: 4px 4px 4px 24px;
@@ -3681,18 +3684,18 @@ footer {
 .blogs-row .rightblog {
     margin-left: 0;
 }
-.forsmeserviceslider .servicecard{
-    min-height:520px !important;
+.forsmeserviceslider .servicecard {
+    min-height: 520px !important;
 }
 
 /* responsive */
-@media screen and (max-width: 1680px){
-    .scrollcard{
+@media screen and (max-width: 1680px) {
+    .scrollcard {
         right: 12.6% !important;
     }
 }
 @media screen and (max-width: 1440px) {
-    .blog-information{
+    .blog-information {
         zoom: 80%;
     }
     .scrollcard {
@@ -3707,16 +3710,16 @@ footer {
     .blog-inner {
         max-width: 1170px;
     }
-    .nextblogs{
+    .nextblogs {
         max-width: max-content;
     }
 }
 
 @media screen and (max-width: 1366px) {
-    .blog-information{
+    .blog-information {
         zoom: 75%;
     }
-    .scrollcard{
+    .scrollcard {
         top: 25px;
     }
     .blog-inner {
@@ -4057,20 +4060,20 @@ footer {
         margin: 16px 0;
     }
 }
-@media screen and (max-width: 1000px){
-    .blog-information{
+@media screen and (max-width: 1000px) {
+    .blog-information {
         zoom: 100%;
         padding: 0 32px;
         box-sizing: border-box;
     }
-    .blog-information .left{
+    .blog-information .left {
         width: 100%;
     }
-    .nextblogs{
+    .nextblogs {
         padding-left: 32px;
         padding-right: 32px;
     }
-    .blog-information .left h1{
+    .blog-information .left h1 {
         font-size: 45px;
         letter-spacing: -1.4px;
     }
@@ -4099,6 +4102,9 @@ footer {
     }
     .navmenu-button {
         display: flex;
+    }
+    .talktousbtn {
+        display: none;
     }
     header {
         position: relative;
@@ -4223,6 +4229,7 @@ footer {
         flex-direction: column;
         margin-top: 150px;
     }
+
     .bigitem {
         max-width: 100%;
     }
@@ -4306,9 +4313,6 @@ footer {
         background-size: 100%;
         background-repeat: no-repeat;
     }
-    .startups-section1 .backgound {
-        display: none;
-    }
     .projectinner-sminfocard {
         flex-direction: column;
     }
@@ -4346,7 +4350,7 @@ footer {
     }
 }
 @media screen and (max-width: 768px) {
-    .nextblogs-inner .rightblog{
+    .nextblogs-inner .rightblog {
         margin-left: 0;
     }
     .blog-col1 {
@@ -4437,7 +4441,7 @@ footer {
     .projectinner-sminfocard {
         flex-wrap: nowrap;
     }
-    .blog-information{
+    .blog-information {
         margin-top: 100px;
     }
 }
@@ -4445,29 +4449,28 @@ footer {
     .blogs-row {
         grid-template-columns: 1fr;
     }
-    .blog-col1{
+    .blog-col1 {
         max-width: 100%;
         box-sizing: border-box;
     }
-    .blog-col1 img{
+    .blog-col1 img {
         width: 100%;
         max-width: 100%;
         max-height: 100%;
     }
-    .blogs-row .rightblog{
+    .blogs-row .rightblog {
         margin-top: 0;
     }
-
 }
 
 @media screen and (max-width: 600px) {
-    .nextblogs-inner{
+    .nextblogs-inner {
         grid-template-columns: 1fr;
     }
-    .nextblogs-inner .rightblog{
+    .nextblogs-inner .rightblog {
         margin-top: 24px;
     }
-    .blog-inner .title .search-main{
+    .blog-inner .title .search-main {
         position: static;
         margin-left: 0;
         width: 100%;
@@ -4543,6 +4546,9 @@ footer {
     .engaginfo2 div h1 {
         font-size: 17px;
     }
+    .engaginfo2 {
+        justify-content: space-between;
+    }
     .talktous-container .left h1 br {
         display: none;
     }
@@ -4559,17 +4565,17 @@ footer {
     }
 }
 @media only screen and (max-width: 500px) {
-    .blog-information .left h1{
+    .blog-information .left h1 {
         font-size: 32px;
     }
-    .bloginfo-title{
+    .bloginfo-title {
         font-size: 26px;
     }
-    .blog-col1 h1{
+    .blog-col1 h1 {
         font-size: 24px;
         letter-spacing: -0.8px;
     }
-    .blog-col1 span{
+    .blog-col1 span {
         font-size: 16px;
         margin-top: 10px;
     }
@@ -4652,3 +4658,42 @@ footer {
     }
 }
 /* buton hover back color #5fc2c8 */
+
+.seeportfoliobtn {
+    border-radius: 53px;
+    background: #2a3342;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.seeportfoliobtn button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+.seeportfoliotext {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 64px;
+    color: #242424;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px; /* 116.667% */
+    letter-spacing: -0.9px;
+}

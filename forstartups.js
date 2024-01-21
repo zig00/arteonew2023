@@ -38,7 +38,9 @@ $(document).ready(function () {
         infinite: true,
         rows: 1,
         swipeToSlide: true,
-        arrows: false,
+        arrows: true,
+        prevArrow: "<button type='button' class='slbtn slick-prev pull-left'><i class='fas fa-chevron-left'></i></button>",
+        nextArrow: "<button type='button' class='slbtn slick-next pull-right'><i class='fas fa-chevron-right'></i></button>",
         responsive: [
             {
                 breakpoint: 1445,
